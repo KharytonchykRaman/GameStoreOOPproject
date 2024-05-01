@@ -1,32 +1,42 @@
 #pragma once
+#include <iostream>
 #include <string>
-
 using namespace std;
 
 class Game {
-public:
+private:
 	string name;
 	int price;
 	double rating;
-	string genre;
 	int releaseDate;
 
-	string getInfo() {
-		string info = "Name: " + name;
-		info += ", price: " + to_string(price) + "$";
-		info += ", rating:" + to_string(rating) + "/10";
-		info += ", genre: " + genre;
-		info += ", release date: " + to_string(releaseDate);
-		return info;
-	}
+	static int count;
+public:
 
-	//default constructor
+	static const int MIN_RELEASE_DATE = 1900;
+	static const int MAX_RELEASE_DATE = 2024;
 
-	Game() {
-		name = "no name";
-		price = 0;
-		rating = 0;
-		genre = "no genre";
-		releaseDate = 0;
-	}
+	static const int MIN_RATING = 0;
+	static const int MAX_RATING = 10;
+
+	Game();
+	Game(string, int, double, int);
+
+	~Game();
+
+	string getName();
+	void setName(string name);
+
+	int getPrice();
+	void setPrice(int price);
+
+	double getRating();
+	void setRating(double rating);
+
+	int getReleaseDate();
+	void setReleaseDate(int releaseDate);
+
+	static int getCount();
+
+	string getInfo();
 };
