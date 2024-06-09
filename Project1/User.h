@@ -10,13 +10,13 @@ private:
 public:
 
 	User() {
-		cout << "User default constructor" << endl;
+		//cout << "User default constructor" << endl;
 	}
 
 	User(string nickname, double balance) : nickname(nickname), balance(balance) {}
 
 	~User() {
-		cout << "User destructor" << endl;
+		//cout << "User destructor" << endl;
 	}
 
 	string getNickname();
@@ -26,4 +26,13 @@ public:
 	void setBalance(double balance);
 
 	string getInfo();
+
+	void operator++();
+	void operator++(int);
+	void operator--();
+	void operator--(int);
+	void operator+(double price);
+	void operator-(double price);
+	void operator*(double price);
+	void operator/(double price);
 };

@@ -4,11 +4,12 @@
 using namespace std;
 
 class Game {
-private:
+protected:
 	string name;
-	int price;
+	double price;
 	double rating;
 	int releaseDate;
+	double sizeGB;
 
 	static int count;
 public:
@@ -20,15 +21,16 @@ public:
 	static const int MAX_RATING = 10;
 
 	Game();
-	Game(string, int, double, int);
+	Game(double);
+	Game(string , double, double, int);
 
 	~Game();
 
 	string getName();
 	void setName(string name);
 
-	int getPrice();
-	void setPrice(int price);
+	double getPrice();
+	void setPrice(double price);
 
 	double getRating();
 	void setRating(double rating);
@@ -36,7 +38,19 @@ public:
 	int getReleaseDate();
 	void setReleaseDate(int releaseDate);
 
+	double getSizeGB();
+	void setSizeGB(double sizeGB);
+
 	static int getCount();
 
 	string getInfo();
+
+	void operator++();
+	void operator++(int);
+	void operator--();
+	void operator--(int);
+	void operator+(double price);
+	void operator-(double price);
+	void operator*(double price);
+	void operator/(double price);
 };

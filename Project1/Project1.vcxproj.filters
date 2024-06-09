@@ -30,6 +30,18 @@
     <ClCompile Include="Library.cpp">
       <Filter>Файлы ресурсов\Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Horror.cpp">
+      <Filter>Файлы ресурсов\Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Shooter.cpp">
+      <Filter>Файлы ресурсов\Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleRoyale.cpp">
+      <Filter>Файлы ресурсов\Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Adventure.cpp">
+      <Filter>Файлы ресурсов\Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -42,6 +54,18 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Library.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Horror.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Shooter.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleRoyale.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Adventure.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

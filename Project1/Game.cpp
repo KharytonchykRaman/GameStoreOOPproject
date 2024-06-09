@@ -9,7 +9,11 @@ int Game::getCount() {
 Game::Game() : Game("no_name", 0, 0, 0) {
 }
 
-Game::Game(string name, int price, double rating, int releaseDate)
+Game::Game(double price) : price(price) {
+	count++;
+};
+
+Game::Game(string name, double price, double rating, int releaseDate)
 	: name(name), price(price), rating(rating), releaseDate(releaseDate) {
 	count++;
 }
@@ -26,11 +30,11 @@ void Game::setName(string name) {
 	this->name = name;
 };
 
-int Game::getPrice() {
+double Game::getPrice() {
 	return price;
 };
 
-void Game::setPrice(int price) {
+void Game::setPrice(double price) {
 	if (price > 0)
 	{
 		this->price = price;
@@ -57,7 +61,18 @@ void Game::setReleaseDate(int releaseDate) {
 	{
 		this->releaseDate = releaseDate;
 	}
-};
+}
+
+double Game::getSizeGB() {
+	return sizeGB;
+}
+
+void Game::setSizeGB(double sizeGB) {
+	if (sizeGB > 0)
+	{
+		this->sizeGB = sizeGB;
+	}
+}
 
 string Game::getInfo() {
 	string s = "Name: " + name;
@@ -65,4 +80,45 @@ string Game::getInfo() {
 	s += ", rating:" + to_string(rating) + "/10";
 	s += ", release date: " + to_string(releaseDate);
 	return s;
+}
+
+void Game::operator++() {
+	++price;
+}
+
+void Game::operator++(int) {
+	price++;
+}
+
+void Game::operator--() {
+	if (price >= 1)
+	{
+		--price;
+	}
+}
+
+void Game::operator--(int) {
+	if (price >= 1)
+	{
+		price--;
+	}
+}
+
+void Game::operator+(double price) {
+	this->price += price;
+}
+
+void Game::operator-(double price) {
+	if (this->price - price >= 0)
+	{
+		this->price -= price;
+	}
+}
+
+void Game::operator*(double price) {
+	this->price *= price;
+}
+
+void Game::operator/(double price) {
+	this->price /= price;
 }
