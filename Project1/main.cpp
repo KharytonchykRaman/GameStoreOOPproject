@@ -19,8 +19,8 @@ int main() {
 
 	Filter filter1;
 
-	cout << "Total price of these games is " << filter1.calcTotalPrice(library1);
-	cout << "Total price of these games is " << filter1.calcTotalPrice(library1);
+	cout << "Total price of these games is " << filter1.calcTotalPrice(library1) << endl;
+	cout << "The best game by rating is " << filter1.getBestGame(library1).getName();
 
 	return 0;
 }
