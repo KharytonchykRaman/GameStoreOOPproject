@@ -7,8 +7,8 @@ private:
 	bool online;
 public:
 	Adventure() : online(false) {};
-	Adventure(bool online, string name, int price, double rating, int releaseDate)
-		: online(online), Game(name, price, rating, releaseDate) {};
+	Adventure(bool online, string name, int price, double rating, int releaseDate, double sizeGB)
+		: online(online), Game(name, price, rating, releaseDate, sizeGB) {};
 
 	bool isOnline();
 	void setOnlineStatus(bool online);

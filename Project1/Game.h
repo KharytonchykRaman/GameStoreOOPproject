@@ -22,7 +22,7 @@ public:
 
 	Game();
 	Game(double);
-	Game(string , double, double, int);
+	Game(string name, double price, double rating, int releaseDate, double sizeGB);
 
 	~Game();
 

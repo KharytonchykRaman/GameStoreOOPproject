@@ -1,5 +1,8 @@
 #pragma once
-#include "Game.h"
+#include "Horror.h"
+#include "Adventure.h"
+#include "BattleRoyale.h"
+#include "Shooter.h"
 
 class Library
 {

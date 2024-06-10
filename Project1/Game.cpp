@@ -6,15 +6,15 @@ int Game::getCount() {
 	return count;
 }
 
-Game::Game() : Game("no_name", 0, 0, 0) {
+Game::Game() : Game("no_name", 0, 0, 0, 0) {
 }
 
 Game::Game(double price) : price(price) {
 	count++;
 };
 
-Game::Game(string name, double price, double rating, int releaseDate)
-	: name(name), price(price), rating(rating), releaseDate(releaseDate) {
+Game::Game(string name, double price, double rating, int releaseDate, double sizeGB)
+	: name(name), price(price), rating(rating), releaseDate(releaseDate), sizeGB(sizeGB) {
 	count++;
 }
 

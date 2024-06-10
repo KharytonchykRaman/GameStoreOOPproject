@@ -7,8 +7,8 @@ private:
 	int numPlayerInGame;
 public:
 	BattleRoyale() : numPlayerInGame(0) {};
-	BattleRoyale(int ageLimit, string name, int price, double rating, int releaseDate)
-		: numPlayerInGame(numPlayerInGame), Game(name, price, rating, releaseDate) {};
+	BattleRoyale(int ageLimit, string name, int price, double rating, int releaseDate, double sizeGB)
+		: numPlayerInGame(numPlayerInGame), Game(name, price, rating, releaseDate, sizeGB) {};
 
 	int getNumPlayerInGame();
 	void setNumPlayerInGame(int numPlayerInGame);
